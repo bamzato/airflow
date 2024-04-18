@@ -27,9 +27,8 @@ def task2():
     return "Task 2"
 
 def task3():
-    print ("Executing Task 3 - Err")
-    print(b)
-    return b
+    print ("Executing Task 3")
+    return "Task 3"
 
 
 task_1 = PythonOperator(
@@ -42,11 +41,11 @@ task_2 = PythonOperator(
     python_callable=task2,
     dag=dag
 )
-task_3_fail = PythonOperator(
-    task_id='task_3_fail',
+task_3 = PythonOperator(
+    task_id='task_3',
     python_callable=task3,
     dag=dag
 )
 
 # Set task dependencies
-task_1 >> task_2 >> task_3_fail
+[task_2, task_3] >> task_1
