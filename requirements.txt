@@ -1,0 +1,15 @@
+rasterio
+xmltodict
+elevation
+richdem
+geopandas
+pandas
+numpy
+Flask
+wbdata
+wbgapi
+wbpy
+xarray
+xmltodict
+gunicorn
+flask

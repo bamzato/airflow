@@ -15,7 +15,10 @@ default_args = {
 period = '*/1 * * * *'
 # once = '@once'
 # daily = '@daily'
-dag = DAG ('my_first_dag', default_args=default_args, schedule_interval=period)
+dag = DAG (
+    'my_first_dag', 
+    default_args=default_args, 
+    schedule_interval=period)
 
 # Define tasks
 def task1():
